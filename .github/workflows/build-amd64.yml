@@ -48,7 +48,7 @@ jobs:
         run: |
           curl -L https://github.com/yuk7/wsldl/releases/download/26032000/icons.zip -o icons.zip
           bsdtar -xf icons.zip
-          bsdtar -cf Devuan.zip rootfs.tar.gz Devuan.exe
+          bsdtar -a -cf Devuan.zip rootfs.tar.gz Devuan.exe
       - name: Push to release
         uses: softprops/action-gh-release@v2
         with:
