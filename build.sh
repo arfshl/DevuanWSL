@@ -34,7 +34,7 @@ sudo mmdebstrap \
     --customize-hook="chroot \$1 sed -i 's/^# \(en_US.UTF-8\)/\1/' /etc/locale.gen" \
     --customize-hook="chroot \$1 /bin/bash -c 'DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales'" \
     ${dist_version} \
-    rootfs.tar..gz \
+    rootfs.tar.gz \
     "deb http://deb.devuan.org/merged ${dist_version} main contrib non-free" \
     "deb http://deb.devuan.org/merged ${dist_version}-updates main contrib non-free" \
     "deb http://deb.devuan.org/merged ${dist_version}-security main contrib non-free"
