@@ -45,9 +45,12 @@ if [ $ARCH = amd64 ]; then
     bsdtar -xf icons.zip
     mv Devuan.exe devuan.exe
     bsdtar -a -cf devuan.zip rootfs.tar.gz devuan.exe
-else
+elif [ $ARCH = arm64 ]; then 
     curl -L https://github.com/yuk7/wsldl/releases/download/26032000/icons_arm64.zip -o icons.zip
     bsdtar -xf icons.zip
     mv Devuan.exe devuan.exe
     bsdtar -a -cf devuan.zip rootfs.tar.gz devuan.exe
+else
+    echo "Unsupported architecture: $ARCH"
+    exit 1  
 fi
