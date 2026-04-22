@@ -35,7 +35,7 @@ sudo mmdebstrap \
     --format=directory \
     ${dist_version} \
     devuan \
-    "deb http://deb.devuan.org/merged ${dist_version} main contrib non-free \
+    "deb http://deb.devuan.org/merged ${dist_version} main contrib non-free" \
     "deb http://deb.devuan.org/merged ${dist_version}-updates main contrib non-free" \
     "deb http://deb.devuan.org/merged ${dist_version}-security main contrib non-free" \
     "deb http://deb.devuan.org/merged ${dist_version}-backports main contrib non-free"
