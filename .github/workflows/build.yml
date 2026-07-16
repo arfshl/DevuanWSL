@@ -56,6 +56,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-amd64, build-arm64]
     steps:
+      - uses: actions/checkout@v7
+
       - name: Download artifact
         uses: actions/download-artifact@v8
         with:
